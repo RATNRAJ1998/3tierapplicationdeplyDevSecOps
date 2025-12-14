@@ -36,7 +36,7 @@ pipeline {
                     -Dsonar.sources=. \
                     -Dsonar.language=py \
                     -Dsonar.python.version=3 \
-                    -Dsonar.host.url=http://localhost:9000
+                    -Dsonar.host.url=http://34.14.162.202:9000/
                     """
                 }
             }
@@ -94,7 +94,7 @@ pipeline {
                 docker compose ps -a
 
                 echo "=== Testing Flask Endpoint ==="
-                curl -I http://localhost:5000 || true
+                curl -I http://http://34.14.162.202:9000/:5000 || true
                 '''
             }
         }
